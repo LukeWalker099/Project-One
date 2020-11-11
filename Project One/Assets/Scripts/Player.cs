@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Transactions;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	private bool isGrounded;
 
+	[Header("Health")]
+	public int currentHealth;
+	public int maxHealth;
 	private void Update()
 
 	{
@@ -28,6 +32,13 @@ public class Player : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
 		{
 			rb.AddForce(Vector2.up * jumpHeight);
+		}
+
+		// Player Health
+
+		if (currentHealth > maxHealth)
+		{
+			currentHealth = maxHealth;
 		}
 	}
 
@@ -50,4 +61,5 @@ public class Player : MonoBehaviour
 			isGrounded = false;
 		}
 	}
+
 }
