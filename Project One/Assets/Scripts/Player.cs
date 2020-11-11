@@ -8,8 +8,6 @@ public class Player : MonoBehaviour
 	public float jumpHeight;
 	[SerializeField]
 	private bool isGrounded;
-	[SerializeField]
-	private bool isInAir;
 
 	private void Update()
 
@@ -29,13 +27,7 @@ public class Player : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
 		{
-			transform.Translate(Vector2.up * jumpHeight * Time.deltaTime);
-			
-			// Double Jump
-			if (isInAir)
-			{
-				transform.Translate(Vector2.up * 2);
-			}
+			rb.AddForce(Vector2.up * jumpHeight);
 		}
 	}
 
@@ -56,7 +48,6 @@ public class Player : MonoBehaviour
 		if (other.gameObject.CompareTag("Ground"))
 		{
 			isGrounded = false;
-			isInAir = true;
 		}
 	}
 }
