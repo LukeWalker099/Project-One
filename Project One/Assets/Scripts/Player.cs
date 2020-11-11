@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	[Header("Game Objects")]
+	public GameManager gameManager;
+	public EnemyManager enemyManager;
+
 	[Header("Coin Collectable")]
 	public GameObject[] coin1;
 
@@ -51,10 +55,22 @@ public class Player : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other)
 
 	{
+		// Check if Player Collects Coin
+
 		if (other.gameObject.CompareTag("Coin"))
 		{
 			Destroy(other.gameObject);
 			CoinScript.coinValue += 1;
+		}
+
+		// Check if Player Enters Water
+
+		if (other.gameObject.CompareTag("Water"))
+		{
+			gameManager.Restart();
+			Destroy(enemyManager.heart1);
+			Destroy(enemyManager.heart2);
+			Destroy(enemyManager.heart3);
 		}
 	}
 

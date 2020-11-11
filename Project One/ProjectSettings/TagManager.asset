@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Enemy
   - Coin
+  - Water
+  - LevelEnd
   layers:
   - Default
   - TransparentFX
