@@ -6,7 +6,7 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField]
 	private Player player;
 
-	[Header("Spawn Point")]
+	[Header("Player Spawn Point")]
 	private float xSpawn = -4.50f;
 	private float ySpawn = -3.60f;
 
@@ -33,5 +33,4 @@ public class EnemyManager : MonoBehaviour
 			}
 		}
 	}
-
 }
