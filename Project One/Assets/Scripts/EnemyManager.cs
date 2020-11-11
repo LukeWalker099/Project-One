@@ -38,6 +38,8 @@ public class EnemyManager : MonoBehaviour
 			else if (player.currentHealth >= 1)
 			{
 				player.currentHealth -= 1;
+				player.movSpeed = 0;
+				player.jumpHeight = 0;
 				Destroy(heart1);
 				GM.Restart();
 				//player.transform.position = new Vector2(xSpawn, ySpawn);

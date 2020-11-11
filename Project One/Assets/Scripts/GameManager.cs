@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
 	public void Restart()
@@ -10,5 +11,6 @@ public class GameManager : MonoBehaviour
 	public void EndGame()
 	{
 		SceneManager.LoadScene(0);
+		CoinScript.coinValue = 0;
 	}
 }

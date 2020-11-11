@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	[Header("Coin Collectable")]
+	public GameObject[] coin1;
+
 	[Header("Movement")]
 	public Rigidbody2D rb;
 	public float movSpeed;
@@ -13,6 +16,9 @@ public class Player : MonoBehaviour
 	[Header("Health")]
 	public int currentHealth;
 	public int maxHealth;
+
+
+
 	private void Update()
 
 	{
@@ -42,6 +48,15 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	private void OnTriggerEnter2D(Collider2D other)
+
+	{
+		if (other.gameObject.CompareTag("Coin"))
+		{
+			Destroy(other.gameObject);
+			CoinScript.coinValue += 1;
+		}
+	}
 
 	private void OnCollisionStay2D(Collision2D other)
 
