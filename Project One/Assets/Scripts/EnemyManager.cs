@@ -9,6 +9,8 @@ public class EnemyManager : MonoBehaviour
 	public RawImage heart3;
 
 	[Header("Game Objects")]
+	public GameObject restartButton;
+	public GameObject restartText;
 	[SerializeField]
 	private Player player;
 	[SerializeField]
@@ -17,6 +19,15 @@ public class EnemyManager : MonoBehaviour
 	//[Header("Player Spawn Point")]
 	//private float xSpawn = -4.50f;
 	//private float ySpawn = -3.60f;
+
+
+	private void Start()
+
+	{
+		restartButton.SetActive(false);
+		restartText.SetActive(false);
+	}
+
 
 	private void OnTriggerEnter2D(Collider2D other)
 
@@ -41,7 +52,8 @@ public class EnemyManager : MonoBehaviour
 				player.movSpeed = 0;
 				player.jumpHeight = 0;
 				Destroy(heart1);
-				GM.Restart();
+				restartButton.SetActive(true);
+				restartText.SetActive(true);
 				//player.transform.position = new Vector2(xSpawn, ySpawn);
 			}
 		}

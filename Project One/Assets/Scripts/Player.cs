@@ -21,8 +21,6 @@ public class Player : MonoBehaviour
 	public int currentHealth;
 	public int maxHealth;
 
-
-
 	private void Update()
 
 	{
