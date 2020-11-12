@@ -5,16 +5,14 @@ public class CoinScript : MonoBehaviour
 {
 	public static int coinValue;
 	public Text coin;
+	public GameObject coinImg;
 
-	private void Start()
-	{
-		coin = gameObject.GetComponent<Text>();
-	}
 
 	public void Update()
 
 	{
-		coin.text = "Coins " + coinValue;
+		coin.text = "" + coinValue;
+		coinImg.SetActive(true);
 	}
 
 

@@ -4,9 +4,11 @@ public class LevelManager : MonoBehaviour
 {
 	[Header("Game Objects")]
 	public GameObject wellDoneText;
+	public GameObject endCoinText;
     public GameObject nextLvlButton;
 	public GameObject coins;
 	public GameObject coinsEnd;
+	public GameObject origCoinImg;
 	public Player player;
 
 	private void Start()
@@ -15,6 +17,7 @@ public class LevelManager : MonoBehaviour
 		coinsEnd.SetActive(false);
 		wellDoneText.SetActive(false);
 		nextLvlButton.SetActive(false);
+		endCoinText.SetActive(false);
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
@@ -25,8 +28,10 @@ public class LevelManager : MonoBehaviour
 			coins.SetActive(false);
 			player.movSpeed = 0;
 			player.jumpHeight = 0;
+			origCoinImg.SetActive(false);
 			wellDoneText.SetActive(true);
 			nextLvlButton.SetActive(true);
+			endCoinText.SetActive(true);
 			coinsEnd.SetActive(true);
 		}
 	}
