@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 		CoinScript.coinValue = 0;
 	}
 
-	public void LoadLevel1()
+	public void LoadLevel()
 
 	{
 		SceneManager.LoadScene(1);

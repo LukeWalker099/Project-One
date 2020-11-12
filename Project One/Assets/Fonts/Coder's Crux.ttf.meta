@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b0481d5f200b9084495e64fe48d99055
+guid: 45eeff4e998e401429be0af32c655104
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: VCR OSD Mono
+  fontName: Coder's Crux
   fontNames:
-  - VCR OSD Mono
+  - Coder's Crux
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
