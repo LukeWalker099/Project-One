@@ -28,12 +28,9 @@ public class EnemyManager : MonoBehaviour
 		restartText.SetActive(false);
 	}
 
-
-	private void OnTriggerEnter2D(Collider2D other)
+	private void OnCollisionEnter2D(Collision2D other)
 
 	{
-		// Damage Player 
-
 		if (other.gameObject.CompareTag("Player"))
 		{
 			if (player.currentHealth >= 3)
@@ -58,4 +55,14 @@ public class EnemyManager : MonoBehaviour
 			}
 		}
 	}
+
+	private void OnCollisionExit2D(Collision2D other)
+
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			Debug.Log("Avoided!");
+		}
+	}
+
 }
