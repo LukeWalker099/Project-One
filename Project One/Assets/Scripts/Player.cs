@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 	public GameManager gameManager;
 	public EnemyManager enemyManager;
 	public SpriteRenderer sprite;
+	private Animator charJump;
 
 	[Header("Coin Collectable")]
 	public GameObject[] coin1;
@@ -17,12 +18,17 @@ public class Player : MonoBehaviour
 	public float jumpHeight;
 	[SerializeField]
 	private bool isGrounded;
+	private bool m_Jump;
 
 	[Header("Health")]
 	public int currentHealth;
 	public int maxHealth;
 
+	private void Start()
 
+	{
+		charJump = gameObject.GetComponent<Animator>();
+	}
 
 	private void Update()
 
@@ -44,7 +50,12 @@ public class Player : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
 		{
+			charJump.SetBool("isJumping", true);
 			rb.AddForce(Vector2.up * jumpHeight);
+		}
+		else
+		{
+			charJump.SetBool("isJumping", false);
 		}
 
 		// Player Health

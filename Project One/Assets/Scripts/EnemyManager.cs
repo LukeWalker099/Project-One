@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
 	public RawImage heart3;
 
 	[Header("Game Objects")]
+	public SpriteRenderer sprite;
 	public GameObject restartButton;
 	public GameObject restartText;
 	[SerializeField]
@@ -35,6 +36,7 @@ public class EnemyManager : MonoBehaviour
 		{
 			if (player.currentHealth >= 3)
 			{
+				sprite.color = new Color(1f, 0f, 0f, 1f);
 				player.currentHealth -= 1;
 				Destroy(heart3);
 			}
@@ -46,8 +48,9 @@ public class EnemyManager : MonoBehaviour
 			else if (player.currentHealth >= 1)
 			{
 				player.currentHealth -= 1;
-				player.movSpeed = 0;
-				player.jumpHeight = 0;
+				//player.movSpeed = 0;
+				//player.jumpHeight = 0;
+				player.enabled = false;
 				Destroy(heart1);
 				restartButton.SetActive(true);
 				restartText.SetActive(true);
@@ -56,13 +59,22 @@ public class EnemyManager : MonoBehaviour
 		}
 	}
 
+	private void OnCollisionStay2D(Collision2D other)
+
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			sprite.color = new Color(1, 0, 0, 1);
+		}
+	}
+
 	private void OnCollisionExit2D(Collision2D other)
 
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			Debug.Log("Avoided!");
-		}
+			sprite.color = new Color(1, 1, 1, 1);
+		}	
 	}
 
 }
