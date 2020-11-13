@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 	[Header("Game Objects")]
 	public GameManager gameManager;
 	public EnemyManager enemyManager;
+	public SpriteRenderer sprite;
 
 	[Header("Coin Collectable")]
 	public GameObject[] coin1;
@@ -21,17 +22,21 @@ public class Player : MonoBehaviour
 	public int currentHealth;
 	public int maxHealth;
 
+
+
 	private void Update()
 
 	{
 		// Move Left and Right
 
-		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) 
+		if (Input.GetKey(KeyCode.A) ||Input.GetKey(KeyCode.LeftArrow)) 
 		{
+			sprite.flipX = true;
 			transform.Translate(Vector2.left * movSpeed * Time.deltaTime);
 		}
 		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 		{
+			sprite.flipX = false;
 			transform.Translate(Vector2.right * movSpeed * Time.deltaTime);
 		}
 
@@ -49,6 +54,7 @@ public class Player : MonoBehaviour
 			currentHealth = maxHealth;
 		}
 	}
+
 
 	private void OnTriggerEnter2D(Collider2D other)
 
