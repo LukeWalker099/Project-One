@@ -26,8 +26,7 @@ public class LevelManager : MonoBehaviour
 		if (other.gameObject.CompareTag("Player"))
 		{
 			coins.SetActive(false);
-			player.movSpeed = 0;
-			player.jumpHeight = 0;
+			player.enabled = false;
 			origCoinImg.SetActive(false);
 			wellDoneText.SetActive(true);
 			nextLvlButton.SetActive(true);
