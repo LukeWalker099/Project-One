@@ -76,26 +76,26 @@ public class Player : MonoBehaviour
 			Destroy(enemyManager.heart2);
 			Destroy(enemyManager.heart3);
 		}
+
+
 	}
 
 	private void OnCollisionStay2D(Collision2D other)
 
 	{
-		// Check if Player is Grounded
-
 		if (other.gameObject.CompareTag("Ground"))
 		{
 			isGrounded = true;
 		}
-		
 	}
 
 	private void OnCollisionExit2D(Collision2D other)
+	
 	{
 		if (other.gameObject.CompareTag("Ground"))
 		{
 			isGrounded = false;
-		}
+		}	
 	}
 
 }
