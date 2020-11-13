@@ -8,6 +8,15 @@ TextureImporter:
   - first:
       213: -2792288539045070442
     second: Character_Right-Sheet_1
+  - first:
+      213: 8549791405716409587
+    second: Character_Right-Sheet_2
+  - first:
+      213: 3223490133233511246
+    second: Character_Right-Sheet_3
+  - first:
+      213: -4175812570121444102
+    second: Character_Right-Sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,9 +120,9 @@ TextureImporter:
         x: 20
         y: 20
         width: 80
-        height: 190
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 200
+      alignment: 9
+      pivot: {x: 0.499708, y: 0.0431937}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -132,9 +141,9 @@ TextureImporter:
         x: 150
         y: 20
         width: 80
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 190
+      alignment: 9
+      pivot: {x: 0.50055754, y: 0.048574377}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,6 +151,69 @@ TextureImporter:
       bones: []
       spriteID: 699f2df2e5ccf39d0800000000000000
       internalID: -2792288539045070442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Right-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 20
+        width: 80
+        height: 180
+      alignment: 9
+      pivot: {x: 0.50178754, y: 0.05115577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc0a691cf5f6a670800000000000000
+      internalID: 8549791405716409587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Right-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 20
+        width: 80
+        height: 190
+      alignment: 9
+      pivot: {x: 0.50000036, y: 0.043852314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b2c5882332cbc20800000000000000
+      internalID: 3223490133233511246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Right-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 20
+        width: 80
+        height: 200
+      alignment: 9
+      pivot: {x: 0.49723738, y: 0.041234083}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4ec4587988c06c0800000000000000
+      internalID: -4175812570121444102
       vertices: []
       indices: 
       edges: []
