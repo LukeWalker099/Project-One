@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
 	public float jumpHeight;
 	[SerializeField]
 	private bool isGrounded;
-	private bool m_Jump;
 
 	[Header("Health")]
 	public int currentHealth;
